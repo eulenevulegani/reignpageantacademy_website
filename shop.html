@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - Reign Pageant Academy</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .shop-container {
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: var(--spacing-lg);
+            padding-top: var(--spacing-md);
+        }
+
+        .sidebar {
+            background: #111;
+            padding: var(--spacing-md);
+            border: 1px solid #333;
+            height: fit-content;
+        }
+
+        .sidebar h4 {
+            color: var(--color-gold);
+            margin-bottom: var(--spacing-sm);
+            border-bottom: 1px solid #333;
+            padding-bottom: 0.5rem;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .sidebar ul li a:hover {
+            color: var(--color-gold);
+            padding-left: 5px;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: var(--spacing-md);
+        }
+
+        .product-card {
+            background: #111;
+            border: 1px solid #333;
+            transition: var(--transition-fast);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--color-gold);
+        }
+
+        .product-img {
+            height: 300px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .product-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition-smooth);
+        }
+
+        .product-card:hover .product-img img {
+            transform: scale(1.1);
+        }
+
+        .add-to-cart-overlay {
+            position: absolute;
+            bottom: -50px;
+            left: 0;
+            width: 100%;
+            background: var(--color-gold);
+            color: #000;
+            text-align: center;
+            padding: 10px;
+            font-weight: bold;
+            transition: var(--transition-fast);
+            cursor: pointer;
+        }
+
+        .product-card:hover .add-to-cart-overlay {
+            bottom: 0;
+        }
+
+        .product-info {
+            padding: var(--spacing-sm);
+            text-align: center;
+        }
+
+        .product-category {
+            font-size: 0.8rem;
+            color: #666;
+            text-transform: uppercase;
+        }
+
+        .product-title {
+            font-size: 1.1rem;
+            margin: 0.5rem 0;
+        }
+
+        .product-price {
+            color: var(--color-gold);
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        @media(max-width: 768px) {
+            .shop-container {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                margin-bottom: var(--spacing-md);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <a href="index.html"><img src="logo-white.png" alt="Reign Pageant Academy Logo"></a>
+                </div>
+                <div class="nav-links" id="navLinks">
+                    <a href="index.html">Home</a>
+                    <a href="shop.html" class="active" style="color: var(--color-gold);">Shop</a>
+                    <a href="index.html#events">Events</a>
+                    <a href="index.html#contact">Contact</a>
+                    <a href="cart.html"><i class="fas fa-shopping-bag"></i> <span id="cartCount">0</span></a>
+                </div>
+                <div class="hamburger" id="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="section-padding"
+        style="padding-top: 150px; background: url('https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;">
+        <div style="background: rgba(0,0,0,0.7); position: absolute; inset:0;"></div>
+        <div class="container text-center" style="position: relative; z-index: 2;">
+            <h1 class="text-gold">The Royal Boutique</h1>
+            <p>Essentials for every Queen</p>
+        </div>
+    </section>
+
+    <!-- Shop Section -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="shop-container">
+
+                <!-- Sidebar -->
+                <aside class="sidebar fade-in-up">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="#">All Products</a></li>
+                        <li><a href="#">Coaching Packages</a></li>
+                        <li><a href="#">Apparel & Omni-Wear</a></li>
+                        <li><a href="#">Pageant Essentials</a></li>
+                        <li><a href="#">Accessories</a></li>
+                    </ul>
+
+                    <h4 style="margin-top: 2rem;">Price Range</h4>
+                    <input type="range" min="0" max="1000" style="width: 100%; accent-color: var(--color-gold);">
+                </aside>
+
+                <!-- Grid -->
+                <div class="product-grid">
+
+                    <!-- Product 1 -->
+                    <div class="product-card fade-in-up">
+                        <div class="product-img">
+                            <img src="https://images.unsplash.com/photo-1543087903-1ac2ec7aa8c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                alt="Coaching">
+                            <div class="add-to-cart-overlay" onclick="addToCart('1-on-1 Coaching Session', 5000)">Add to
+                                Cart</div>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Coaching</span>
+                            <h3 class="product-title"><a href="product.html">1-on-1 Coaching Session</a></h3>
+                            <div class="product-price">KES 5,000</div>
+                        </div>
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="product-card fade-in-up">
+                        <div class="product-img">
+                            <img src="https://images.unsplash.com/photo-1594223274512-ad4803739b7c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                alt="Sash">
+                            <div class="add-to-cart-overlay" onclick="addToCart('Custom Satin Sash', 2500)">Add to Cart
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Essentials</span>
+                            <h3 class="product-title"><a href="product.html">Custom Satin Sash</a></h3>
+                            <div class="product-price">KES 2,500</div>
+                        </div>
+                    </div>
+
+                    <!-- Product 3 -->
+                    <div class="product-card fade-in-up">
+                        <div class="product-img">
+                            <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                alt="T-Shirt">
+                            <div class="add-to-cart-overlay" onclick="addToCart('Reign Academy Tee', 1500)">Add to Cart
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Apparel</span>
+                            <h3 class="product-title"><a href="product.html">Reign Academy Tee</a></h3>
+                            <div class="product-price">KES 1,500</div>
+                        </div>
+                    </div>
+
+                    <!-- Product 4 -->
+                    <div class="product-card fade-in-up">
+                        <div class="product-img">
+                            <img src="https://images.unsplash.com/photo-1606760227091-3dd870d97f1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                alt="Crown Box">
+                            <div class="add-to-cart-overlay" onclick="addToCart('Premium Crown Case', 3500)">Add to Cart
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Accessories</span>
+                            <h3 class="product-title"><a href="product.html">Premium Crown Case</a></h3>
+                            <div class="product-price">KES 3,500</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>&copy; 2025 Reign Pageant Academy.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

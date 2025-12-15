@@ -1,0 +1,97 @@
+<?php
+/*
+Template Name: Events Page
+*/
+get_header(); ?>
+
+<!-- Page Header -->
+<section class="section-padding" style="padding-top: 150px; background: var(--color-dark-grey); text-align: center;">
+    <div class="container fade-in-up">
+        <h1 class="text-gold">Upcoming Events</h1>
+        <p>Join us for exclusive galas, masterclasses, and pageants.</p>
+    </div>
+</section>
+
+<!-- Events Grid -->
+<section class="section-padding">
+    <div class="container">
+        <!-- In a real WP site, this would be a loop of 'event' custom post types -->
+        <div class="vm-grid">
+            <!-- Event 1 -->
+            <div class="card fade-in-up">
+                <img src="https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                    alt="Event" style="margin-bottom: 1rem; border-radius: 4px;">
+                <div
+                    style="color: var(--color-gold); font-size: 0.9rem; margin-bottom: 0.5rem; text-transform: uppercase;">
+                    DEC 20, 2025</div>
+                <h3>Annual Networking Gala</h3>
+                <p style="margin-bottom: 1rem;">An exclusive evening for queens, mentors, and industry leaders to
+                    connect.</p>
+                <a href="<?php echo home_url('#contact'); ?>" class="btn btn-outline">RSVP Now</a>
+            </div>
+
+            <!-- Event 2 -->
+            <div class="card fade-in-up">
+                <img src="https://images.unsplash.com/photo-1516062423079-7ca13cdc7f5a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                    alt="Event" style="margin-bottom: 1rem; border-radius: 4px;">
+                <div
+                    style="color: var(--color-gold); font-size: 0.9rem; margin-bottom: 0.5rem; text-transform: uppercase;">
+                    JAN 15, 2026</div>
+                <h3>Runway Masterclass</h3>
+                <p style="margin-bottom: 1rem;">Perfect your walk with international pageant coach Maria Lopez.</p>
+                <a href="<?php echo home_url('/shop'); ?>" class="btn btn-outline">Register (KES 5,000)</a>
+            </div>
+
+            <!-- Event 3 -->
+            <div class="card fade-in-up">
+                <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                    alt="Event" style="margin-bottom: 1rem; border-radius: 4px;">
+                <div
+                    style="color: var(--color-gold); font-size: 0.9rem; margin-bottom: 0.5rem; text-transform: uppercase;">
+                    FEB 01, 2026</div>
+                <h3>Miss Progress Kenya Finals</h3>
+                <p style="margin-bottom: 1rem;">Witness the crowning of the new queen. Tickets available now.</p>
+                <a href="<?php echo home_url('/shop'); ?>" class="btn btn-outline">Buy Tickets</a>
+            </div>
+
+            <!-- Event 4 (New) -->
+            <div class="card fade-in-up">
+                    <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                    alt="Event" style="margin-bottom: 1rem; border-radius: 4px;">
+                <div
+                    style="color: var(--color-gold); font-size: 0.9rem; margin-bottom: 0.5rem; text-transform: uppercase;">
+                    MAR 10, 2026</div>
+                <h3>Etiquette Workshop</h3>
+                <p style="margin-bottom: 1rem;">Master social graces and dining etiquette fit for royalty.</p>
+                <a href="<?php echo home_url('/shop'); ?>" class="btn btn-outline">Register (KES 3,000)</a>
+            </div>
+
+                <!-- Event 5 (New) -->
+            <div class="card fade-in-up">
+                    <img src="https://images.unsplash.com/photo-1520483602335-3b3dd1c50d2e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                    alt="Event" style="margin-bottom: 1rem; border-radius: 4px;">
+                <div
+                    style="color: var(--color-gold); font-size: 0.9rem; margin-bottom: 0.5rem; text-transform: uppercase;">
+                    APR 05, 2026</div>
+                <h3>Personal Branding Summit</h3>
+                <p style="margin-bottom: 1rem;">Build your digital presence and personal brand.</p>
+                <a href="<?php echo home_url('/shop'); ?>" class="btn btn-outline">Register (KES 4,500)</a>
+            </div>
+
+                <!-- Event 6 (New) -->
+            <div class="card fade-in-up">
+                    <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                    alt="Event" style="margin-bottom: 1rem; border-radius: 4px;">
+                <div
+                    style="color: var(--color-gold); font-size: 0.9rem; margin-bottom: 0.5rem; text-transform: uppercase;">
+                    MAY 20, 2026</div>
+                <h3>Charity Fashion Show</h3>
+                <p style="margin-bottom: 1rem;">A fundraising fashion show supporting our 'Queens for Community' initiative.</p>
+                <a href="<?php echo home_url('#contact'); ?>" class="btn btn-outline">Donate / RSVP</a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<?php get_footer(); ?>
