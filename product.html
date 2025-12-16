@@ -18,7 +18,8 @@
         .pd-img img {
             width: 100%;
             border-radius: 8px;
-            border: 1px solid #333;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
         }
 
         .pd-info h1 {
@@ -33,7 +34,7 @@
         }
 
         .pd-desc {
-            color: #999;
+            color: var(--text-secondary);
             margin-bottom: var(--spacing-md);
             font-size: 1.1rem;
         }
@@ -48,15 +49,15 @@
         .qty-input {
             width: 60px;
             padding: 0.5rem;
-            background: #000;
+            background: var(--bg-body);
             border: 1px solid var(--color-gold);
-            color: #fff;
+            color: var(--text-main);
             text-align: center;
             font-size: 1.2rem;
         }
 
         .meta-info {
-            border-top: 1px solid #333;
+            border-top: 1px solid var(--border-color);
             padding-top: var(--spacing-sm);
             margin-top: var(--spacing-md);
             color: #666;
@@ -68,15 +69,18 @@
 <body>
 
     <!-- Header -->
-    <header id="header" style="background: rgba(0,0,0,0.9);">
+    <header id="header" style="background: var(--bg-header-scrolled);">
         <div class="container">
             <nav>
                 <div class="logo">
-                    <a href="index.html"><img src="logo-white.png" alt="Reign Pageant Academy Logo"></a>
+                    <a href="index.html"><img src="img/logo-white.png" alt="Reign Pageant Academy Logo"></a>
                 </div>
                 <div class="nav-links">
                     <a href="shop.html">Back to Shop</a>
                     <a href="cart.html"><i class="fas fa-shopping-bag"></i> <span id="cartCount">0</span></a>
+                    <button id="themeToggle" class="theme-toggle" aria-label="Toggle Theme">
+                        <i class="fas fa-sun"></i>
+                    </button>
                 </div>
             </nav>
         </div>
@@ -113,7 +117,7 @@
     </section>
 
     <!-- Related Products -->
-    <section class="section-padding" style="background: #0a0a0a;">
+    <section class="section-padding">
         <div class="container">
             <h3 class="text-center text-gold" style="margin-bottom: var(--spacing-md);">You may also like</h3>
             <div class="vm-grid">

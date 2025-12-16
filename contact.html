@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Reign Pageant Academy</title>
+    <meta name="description"
+        content="Get in touch with Reign Pageant Academy for inquiries, bookings, and collaborations.">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Icons (FontAwesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Theme Init (Prevent Flash) -->
+    <script>
+        (function () {
+            const savedTheme = localStorage.getItem('theme');
+            const systemPrefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+            if (savedTheme === 'light' || (!savedTheme && systemPrefersLight)) {
+                document.documentElement.setAttribute('data-theme', 'light');
+            }
+        })();
+    </script>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <a href="index.html"><img src="img/logo-white.png" alt="Reign Pageant Academy Logo"></a>
+                </div>
+                <div class="nav-links" id="navLinks">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="services.html">Services</a>
+                    <a href="shop.html">Shop</a>
+                    <a href="events.html">Events</a>
+                    <a href="contact.html" class="active" style="color: var(--color-gold);">Contact</a>
+                    <a href="cart.html"><i class="fas fa-shopping-bag"></i> <span id="cartCount">0</span></a>
+                    <button id="themeToggle" class="theme-toggle" aria-label="Toggle Theme">
+                        <i class="fas fa-sun"></i>
+                    </button>
+                </div>
+                <div class="hamburger" id="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="section-padding relative"
+        style="padding-top: 120px; padding-bottom: 1rem; background: var(--bg-body);">
+        <div class="container text-center relative z-2">
+            <h1 class="text-gold">Contact Us</h1>
+            <p>We'd love to hear from you</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="section-padding" style="padding-top: 1rem;">
+        <div class="container">
+            <div class="grid-2" style="align-items: start;">
+
+                <!-- Contact Info -->
+                <div class="fade-in-up">
+                    <p class="mb-md">Whether you have a question about our courses, want to partner with us, or just
+                        want to say hello, we're here to help.</p>
+
+                    <div class="mb-md">
+                        <h4 class="mb-xs"><i class="fas fa-envelope text-gold" style="margin-right: 10px;"></i> Email
+                        </h4>
+                        <p>reignpageantacademy@gmail.com</p>
+                    </div>
+
+                    <div class="mb-md">
+                        <h4 class="mb-xs"><i class="fab fa-instagram text-gold" style="margin-right: 10px;"></i>
+                            Instagram</h4>
+                        <p>@reignpageantacademy</p>
+                    </div>
+
+                    <div class="mb-md">
+                        <h4 class="mb-xs"><i class="fas fa-map-marker-alt text-gold" style="margin-right: 10px;"></i>
+                            Location</h4>
+                        <p>Nairobi, Kenya</p>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="form-container fade-in-up">
+                    <h3 class="text-gold mb-md text-center">Send us a Message</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Send Message</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <img src="img/logo-white.png" alt="Logo">
+                    </div>
+                    <!-- <p style="color: #999;">A Legacy of Royalty.</p> -->
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope text-gold"></i> reignpageantacademy@gmail.com</li>
+                        <li><i class="fab fa-instagram text-gold"></i> @reignpageantacademy</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="audition.html">Auditions</a></li>
+                        <li><a href="#">Client Portal <i class="fas fa-lock" style="font-size: 0.7rem;"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Reign Pageant Academy. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

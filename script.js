@@ -1,5 +1,57 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+    // --- Theme Toggle ---
+    const themeToggle = document.getElementById('themeToggle');
+    const html = document.documentElement;
+    const icon = themeToggle ? themeToggle.querySelector('i') : null;
+    const logoImg = document.querySelector('.logo img'); // Header logo
+    const footerLogoImg = document.querySelector('.footer-logo img'); // Footer logo
+
+    // Function to update logo
+    function updateLogo(theme) {
+        const src = theme === 'light' ? 'img/logo.png' : 'img/logo-white.png';
+
+        if (logoImg) logoImg.src = src;
+        if (footerLogoImg) footerLogoImg.src = src;
+    }
+
+    // Check local storage or system preference
+    const savedTheme = localStorage.getItem('theme');
+    const systemPrefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+
+    if (savedTheme === 'light' || (!savedTheme && systemPrefersLight)) {
+        html.setAttribute('data-theme', 'light');
+        if (icon) {
+            icon.classList.remove('fa-sun');
+            icon.classList.add('fa-moon');
+        }
+        updateLogo('light');
+    } else {
+        updateLogo('dark');
+    }
+
+    if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+
+            updateLogo(newTheme);
+
+            if (icon) {
+                if (newTheme === 'light') {
+                    icon.classList.remove('fa-sun');
+                    icon.classList.add('fa-moon');
+                } else {
+                    icon.classList.remove('fa-moon');
+                    icon.classList.add('fa-sun');
+                }
+            }
+        });
+    }
+
     // --- Mobile Menu ---
     const hamburger = document.getElementById('hamburger');
     const navLinks = document.getElementById('navLinks');

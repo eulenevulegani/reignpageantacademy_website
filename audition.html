@@ -7,60 +7,17 @@
     <title>Audition - Reign Pageant Academy</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        /* Extra styles for form */
-        .form-container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: #111;
-            padding: var(--spacing-md);
-            border: 1px solid #333;
-            border-radius: 8px;
-        }
 
-        .form-group {
-            margin-bottom: var(--spacing-md);
-        }
-
-        label {
-            display: block;
-            margin-bottom: 0.5rem;
-            color: var(--color-gold);
-            font-family: var(--font-heading);
-            letter-spacing: 1px;
-        }
-
-        input,
-        textarea,
-        select {
-            width: 100%;
-            padding: 1rem;
-            background: #000;
-            border: 1px solid #333;
-            color: #fff;
-            border-radius: 4px;
-            font-family: var(--font-body);
-        }
-
-        input:focus,
-        textarea:focus {
-            outline: none;
-            border-color: var(--color-gold);
-        }
-
-        .file-upload-box {
-            border: 2px dashed #444;
-            padding: 2rem;
-            text-align: center;
-            cursor: pointer;
-            transition: var(--transition-fast);
-        }
-
-        .file-upload-box:hover {
-            border-color: var(--color-gold);
-            background: #1a1a1a;
-        }
-    </style>
+    <!-- Theme Init (Prevent Flash) -->
+    <script>
+        (function () {
+            const savedTheme = localStorage.getItem('theme');
+            const systemPrefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+            if (savedTheme === 'light' || (!savedTheme && systemPrefersLight)) {
+                document.documentElement.setAttribute('data-theme', 'light');
+            }
+        })();
+    </script>
 </head>
 
 <body>
@@ -70,16 +27,19 @@
         <div class="container">
             <nav>
                 <div class="logo">
-                    <a href="index.html"><img src="logo-white.png" alt="Reign Pageant Academy Logo"></a>
+                    <a href="index.html"><img src="img/logo-white.png" alt="Reign Pageant Academy Logo"></a>
                 </div>
                 <div class="nav-links" id="navLinks">
                     <a href="index.html">Home</a>
-                    <a href="index.html#about">About</a>
-                    <a href="index.html#vision">Vision & Mission</a>
-                    <a href="index.html#services">Services</a>
+                    <a href="about.html">About</a>
+                    <a href="services.html">Services</a>
                     <a href="shop.html">Shop</a>
-                    <a href="audition.html" class="btn btn-outline"
-                        style="background: var(--color-gold); color: #000;">Audition Now</a>
+                    <a href="events.html">Events</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="cart.html"><i class="fas fa-shopping-bag"></i> <span id="cartCount">0</span></a>
+                    <button id="themeToggle" class="theme-toggle" aria-label="Toggle Theme">
+                        <i class="fas fa-sun"></i>
+                    </button>
                 </div>
                 <div class="hamburger" id="hamburger">
                     <i class="fas fa-bars"></i>
@@ -89,10 +49,8 @@
     </header>
 
     <!-- Page Header -->
-    <section class="section-padding"
-        style="padding-top: 150px; background: url('https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover; position: relative;">
-        <div style="position: absolute; inset: 0; background: rgba(0,0,0,0.8);"></div>
-        <div class="container text-center" style="position: relative; z-index: 2;">
+    <section class="section-padding relative" style="padding-top: 150px; background: var(--bg-body);">
+        <div class="container text-center relative z-2">
             <h1 class="text-gold">Miss Progress Kenya</h1>
             <p>Audition Application Form</p>
         </div>
@@ -103,10 +61,11 @@
         <div class="container">
             <div class="form-container fade-in-up">
                 <form id="auditionForm">
-                    <h3 style="margin-bottom: 2rem; border-bottom: 1px solid #333; padding-bottom: 1rem;">Personal
+                    <h3 class="mb-md" style="border-bottom: 1px solid var(--border-color); padding-bottom: 1rem;">
+                        Personal
                         Details</h3>
 
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                    <div class="grid-2">
                         <div class="form-group">
                             <label>Full Name</label>
                             <input type="text" placeholder="Jane Doe" required>
@@ -117,7 +76,7 @@
                         </div>
                     </div>
 
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                    <div class="grid-2">
                         <div class="form-group">
                             <label>Height (cm)</label>
                             <input type="number" placeholder="175" required>
@@ -128,8 +87,7 @@
                         </div>
                     </div>
 
-                    <h3
-                        style="margin-bottom: 2rem; border-bottom: 1px solid #333; padding-bottom: 1rem; margin-top: 2rem;">
+                    <h3 class="mb-md mt-md" style="border-bottom: 1px solid var(--border-color); padding-bottom: 1rem;">
                         Contact Info</h3>
 
                     <div class="form-group">
@@ -147,14 +105,13 @@
                         <input type="text" placeholder="@yourhandle" required>
                     </div>
 
-                    <h3
-                        style="margin-bottom: 2rem; border-bottom: 1px solid #333; padding-bottom: 1rem; margin-top: 2rem;">
+                    <h3 class="mb-md mt-md" style="border-bottom: 1px solid var(--border-color); padding-bottom: 1rem;">
                         Audition Materials</h3>
 
                     <div class="form-group">
                         <label>Upload Headshot (Max 5MB)</label>
                         <div class="file-upload-box">
-                            <i class="fas fa-camera text-gold" style="font-size: 2rem; margin-bottom: 1rem;"></i>
+                            <i class="fas fa-camera text-gold mb-sm" style="font-size: 2rem;"></i>
                             <p>Click to browse or drag image here</p>
                             <input type="file" accept="image/*" style="display: none;" id="headshot">
                         </div>
@@ -163,7 +120,7 @@
                     <div class="form-group">
                         <label>Upload Full Body Shot (Max 5MB)</label>
                         <div class="file-upload-box">
-                            <i class="fas fa-female text-gold" style="font-size: 2rem; margin-bottom: 1rem;"></i>
+                            <i class="fas fa-female text-gold mb-sm" style="font-size: 2rem;"></i>
                             <p>Click to browse or drag image here</p>
                             <input type="file" accept="image/*" style="display: none;" id="bodyshot">
                         </div>

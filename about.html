@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Reign Pageant Academy</title>
+    <meta name="description"
+        content="Learn more about Reign Pageant Academy, our mission, vision, and the team behind the crown.">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Icons (FontAwesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Theme Init (Prevent Flash) -->
+    <script>
+        (function () {
+            const savedTheme = localStorage.getItem('theme');
+            const systemPrefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+            if (savedTheme === 'light' || (!savedTheme && systemPrefersLight)) {
+                document.documentElement.setAttribute('data-theme', 'light');
+            }
+        })();
+    </script>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <a href="index.html"><img src="img/logo-white.png" alt="Reign Pageant Academy Logo"></a>
+                </div>
+                <div class="nav-links" id="navLinks">
+                    <a href="index.html">Home</a>
+                    <a href="about.html" class="active" style="color: var(--color-gold);">About</a>
+                    <a href="services.html">Services</a>
+                    <a href="shop.html">Shop</a>
+                    <a href="events.html">Events</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="cart.html"><i class="fas fa-shopping-bag"></i> <span id="cartCount">0</span></a>
+                    <button id="themeToggle" class="theme-toggle" aria-label="Toggle Theme">
+                        <i class="fas fa-sun"></i>
+                    </button>
+                </div>
+                <div class="hamburger" id="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="section-padding relative"
+        style="padding-top: 120px; padding-bottom: 1rem; background: var(--bg-body);">
+        <div class="container text-center relative z-2">
+            <h1 class="text-gold">About Reign Academy</h1>
+            <p>Cultivating Elegance, Leadership, and Purpose</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="section-padding" style="padding-top: 1rem;">
+        <div class="container">
+            <!-- Part 1: Who We Are (Expanded) -->
+            <!-- Part 1: Who We Are (Expanded) -->
+            <div style="margin-bottom: var(--spacing-xl);">
+                <div class="fade-in-up">
+                    <p class="mb-sm">Reign Pageant Academy was founded with a singular vision: to redefine what it means
+                        to be a beauty queen in the modern era. We noticed a gap in the industry—many aspiring queens
+                        had the beauty and drive but lacked the refined skills, strategic branding, and mental
+                        resilience needed to win international titles and sustain a career thereafter.</p>
+                    <p>We are Kenya’s premier finishing and pageant development institution, a sanctuary where raw
+                        potential is polished into regal excellence.</p>
+                </div>
+            </div>
+
+            <!-- Part 2: Philosophy -->
+            <div class="text-center fade-in-up mb-lg" style="max-width: 800px; margin-left: auto; margin-right: auto;">
+                <h5 class="text-gold">Our Philosophy</h5>
+                <h2 class="mb-md">The "Reign" Standard</h2>
+                <p>We believe that royalty is not just a title you win; it is a mindset you cultivate. Our training
+                    methodology is holistic, focusing on three pillars:</p>
+            </div>
+
+            <div class="vm-grid mb-lg">
+                <div class="card fade-in-up text-center">
+                    <i class="fas fa-gem text-gold mb-sm" style="font-size: 2rem;"></i>
+                    <h3>Refinement</h3>
+                    <p>Mastering the art of etiquette, poise, and social graces to navigate any room with confidence.
+                    </p>
+                </div>
+                <div class="card fade-in-up text-center">
+                    <i class="fas fa-brain text-gold mb-sm" style="font-size: 2rem;"></i>
+                    <h3>Intellect</h3>
+                    <p>Developing critical thinking, public speaking, and advocacy skills to amplify your voice and
+                        cause.</p>
+                </div>
+                <div class="card fade-in-up text-center">
+                    <i class="fas fa-heart text-gold mb-sm" style="font-size: 2rem;"></i>
+                    <h3>Purpose</h3>
+                    <p>Aligning your personal brand with a cause that truly matters, ensuring your reign leaves a
+                        lasting legacy.</p>
+                </div>
+            </div>
+
+            <!-- Part 3: The Founder / Team (Placeholder) -->
+            <div class="grid-2" style="align-items: center;">
+                <div class="fade-in-up">
+                    <img src="img/audrey-rendo.png" alt="Audrey Rendo - Founder" class="object-cover w-100"
+                        style="height: 500px; border-radius: var(--border-radius-lg);">
+                </div>
+                <div class="fade-in-up" style="padding-left: 2rem;">
+                    <h5 class="text-gold">Leadership</h5>
+                    <h2 class="mb-md">Meet the Director</h2>
+                    <h4 class="mb-sm">Audrey Rendo <span class="text-gold" style="font-size: 0.9rem;">(Founder & Head
+                            Coach)</span></h4>
+                    <p class="mb-md">Audrey Rendo is an accomplished runway model, fashion blogger, and media science
+                        graduate who represented Kenya at Miss Progress International 2018 in Italy. With a rich
+                        background in pageantry—including titles like Miss Moi University and Miss Talent—she founded
+                        Reign Pageant Academy to bridge the gap between raw potential and international success.</p>
+                    <p class="mb-md">"My goal is to see every student walk out of our doors not just as a contestant,
+                        but as a leader ready to take on the world."</p>
+
+                    <img src="img/logo-white.png" alt="Signature" style="height: 50px; opacity: 0.8;">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <img src="img/logo-white.png" alt="Logo">
+                    </div>
+                    <p style="color: #999;">A Legacy of Royalty.
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope text-gold"></i> reignpageantacademy@gmail.com</li>
+                        <li><i class="fab fa-instagram text-gold"></i> @reignpageantacademy</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="audition.html">Auditions</a></li>
+                        <li><a href="#">Client Portal <i class="fas fa-lock" style="font-size: 0.7rem;"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Reign Pageant Academy. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

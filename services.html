@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Reign Pageant Academy</title>
+    <meta name="description"
+        content="Explore the pageant training, personal branding, and consultancy services offered by Reign Academy.">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Icons (FontAwesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Theme Init (Prevent Flash) -->
+    <script>
+        (function () {
+            const savedTheme = localStorage.getItem('theme');
+            const systemPrefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+            if (savedTheme === 'light' || (!savedTheme && systemPrefersLight)) {
+                document.documentElement.setAttribute('data-theme', 'light');
+            }
+        })();
+    </script>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <a href="index.html"><img src="img/logo-white.png" alt="Reign Pageant Academy Logo"></a>
+                </div>
+                <div class="nav-links" id="navLinks">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="services.html" class="active" style="color: var(--color-gold);">Services</a>
+                    <a href="shop.html">Shop</a>
+                    <a href="events.html">Events</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="cart.html"><i class="fas fa-shopping-bag"></i> <span id="cartCount">0</span></a>
+                    <button id="themeToggle" class="theme-toggle" aria-label="Toggle Theme">
+                        <i class="fas fa-sun"></i>
+                    </button>
+                </div>
+                <div class="hamburger" id="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="section-padding relative"
+        style="padding-top: 120px; padding-bottom: 1rem; background: var(--bg-body);">
+        <div class="container text-center relative z-2">
+            <h1 class="text-gold">Our Services</h1>
+            <p>Empowering Queens & Organizations</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="section-padding" style="padding-top: 1rem;">
+        <div class="container">
+            <div class="text-center fade-in-up mb-lg">
+                <p>From individual coaching to full-scale pageant production, we cover every aspect of the industry.</p>
+            </div>
+
+            <div class="vm-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+
+                <!-- Service 1 -->
+                <div class="card fade-in-up">
+                    <i class="fas fa-crown text-gold mb-sm" style="font-size: 2rem;"></i>
+                    <h3>Pageant Development</h3>
+                    <p>Holistic training blending runway mastery, stage presence, and queen-specific performance
+                        training. We prepare you to walk with confidence and grace.</p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="card fade-in-up">
+                    <i class="fas fa-gem text-gold mb-sm" style="font-size: 2rem;"></i>
+                    <h3>Personal Branding</h3>
+                    <p>Building powerful, polished, and purpose-driven personal brands. We help aspiring queens identify
+                        their unique value proposition.</p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="card fade-in-up">
+                    <i class="fas fa-microphone-alt text-gold mb-sm" style="font-size: 2rem;"></i>
+                    <h3>Communication Skills</h3>
+                    <p>Expert coaching in public speaking, interview techniques, and effective communication. Learn to
+                        articulate your thoughts with clarity and conviction.</p>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="card fade-in-up">
+                    <i class="fas fa-handshake text-gold mb-sm" style="font-size: 2rem;"></i>
+                    <h3>Strategic Consultancy</h3>
+                    <p>Partnering with organizers to structure competitions, bootcamps, and contestant experiences. We
+                        help elevate the standard of your pageant.</p>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="card fade-in-up">
+                    <i class="fas fa-palette text-gold mb-sm" style="font-size: 2rem;"></i>
+                    <h3>Creative Direction</h3>
+                    <p>Providing professional creative direction, scheduling, and merchandising for pageant events. We
+                        ensure your event is visually stunning and well-organized.</p>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="card fade-in-up">
+                    <i class="fas fa-briefcase text-gold mb-sm" style="font-size: 2rem;"></i>
+                    <h3>Entrepreneurship</h3>
+                    <p>Equipping women with the entrepreneurial skills needed to sustain their reign and career. We
+                        focus on financial literacy and business planning.</p>
+                </div>
+            </div>
+
+            <div class="text-center mt-lg">
+                <p class="mb-md">Interested in booking a session or consultancy?</p>
+                <a href="contact.html" class="btn btn-primary">Get in Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <img src="img/logo-white.png" alt="Logo">
+                    </div>
+                    <!-- <p style="color: #999;">A Legacy of Royalty.</p> Removed as per user cleanup -->
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope text-gold"></i> reignpageantacademy@gmail.com</li>
+                        <li><i class="fab fa-instagram text-gold"></i> @reignpageantacademy</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="audition.html">Auditions</a></li>
+                        <li><a href="#">Client Portal <i class="fas fa-lock" style="font-size: 0.7rem;"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Reign Pageant Academy. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
