@@ -206,6 +206,13 @@ header.scrolled .logo img {
     gap: 2rem;
 }
 
+.hamburger {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text-main);
+}
+
 .nav-links a {
     font-family: var(--font-heading);
     font-size: 0.9rem;
@@ -418,16 +425,41 @@ footer {
 
     .nav-links {
         display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--bg-header);
+        padding: 2rem;
+        border-bottom: 1px solid var(--border-color);
+        gap: 1.5rem;
+        backdrop-filter: blur(15px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+        animation: fadeInDown 0.3s ease forwards;
     }
 
     .hamburger {
         display: block;
-        color: var(--text-main);
-        font-size: 1.5rem;
     }
 }
 
-/* --- Utilities & Helper Classes --- */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .mt-sm {
     margin-top: var(--spacing-sm);
 }
