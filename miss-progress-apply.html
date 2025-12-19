@@ -408,8 +408,13 @@
         // Form Submission Handler
         document.getElementById('missProgressForm').addEventListener('submit', (e) => {
             e.preventDefault();
-            alert('Thank you for your interest in Miss Progress Kenya. Shortlisted applicants will be contacted with next steps.');
-            // Here you would normally send the data to a server
+            const btn = e.target.querySelector('button[type="submit"]');
+            btn.innerText = 'Submitting...';
+            btn.style.opacity = '0.7';
+
+            setTimeout(() => {
+                window.location.href = 'thank-you.html';
+            }, 1000);
         });
     </script>
 </body>
