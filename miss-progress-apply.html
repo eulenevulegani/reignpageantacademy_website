@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply - Miss Progress Kenya | Reign Pageant Academy</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Theme Init (Prevent Flash) -->
+    <script>
+        (function () {
+            const savedTheme = localStorage.getItem('theme');
+            const systemPrefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+            if (savedTheme === 'light' || (!savedTheme && systemPrefersLight)) {
+                document.documentElement.setAttribute('data-theme', 'light');
+            }
+        })();
+    </script>
+    <style>
+        /* Extra styles for the complex form */
+        .form-section-title {
+            color: var(--color-gold);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 1rem;
+            margin-bottom: 2rem;
+            margin-top: 3rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .form-section-title:first-of-type {
+            margin-top: 0;
+        }
+
+        .requirement-list {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .requirement-item {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        .requirement-item i {
+            color: var(--color-gold);
+            margin-top: 4px;
+        }
+
+        .checkbox-group {
+            display: grid;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .checkbox-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            cursor: pointer;
+            padding: 1rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            transition: var(--transition-fast);
+        }
+
+        .checkbox-item:hover {
+            border-color: var(--color-gold);
+        }
+
+        .checkbox-item input {
+            width: auto;
+            margin-top: 4px;
+        }
+
+        .fee-highlight {
+            background: var(--gradient-gold);
+            color: #000;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            margin-bottom: 2rem;
+            font-weight: 700;
+        }
+
+        .instruction-text {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <a href="index.html"><img src="img/logo-white.png" alt="Reign Pageant Academy Logo"></a>
+                </div>
+                <div class="nav-links" id="navLinks">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="index.html#services">Services</a>
+                    <a href="shop.html">Shop</a>
+                    <a href="events.html">Events</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="cart.html"><i class="fas fa-shopping-bag"></i> <span id="cartCount">0</span></a>
+                    <button id="themeToggle" class="theme-toggle" aria-label="Toggle Theme">
+                        <i class="fas fa-sun"></i>
+                    </button>
+                </div>
+                <div class="hamburger" id="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="section-padding relative" style="padding-top: 150px; background: var(--bg-body);">
+        <div class="container text-center relative z-2">
+            <h5 class="text-gold">Empowering Progress</h5>
+            <h1 class="text-white">Miss Progress Kenya</h1>
+            <p class="mt-sm" style="max-width: 800px; margin-left: auto; margin-right: auto;">
+                A development-focused international title anchored on human rights, gender equality, social inclusion,
+                and sustainability.
+            </p>
+        </div>
+    </section>
+
+    <!-- Form Section -->
+    <section class="section-padding" style="padding-top: 0;">
+        <div class="container">
+            <div class="form-container fade-in-up" style="max-width: 900px;">
+                <div
+                    style="background: var(--bg-card); padding: 2rem; border-radius: 8px; border: 1px solid var(--border-color); margin-bottom: 3rem;">
+                    <p style="margin-bottom: 1rem;">Welcome to the Miss Progress Kenya Application.</p>
+                    <p style="font-size: 0.95rem; line-height: 1.8;">
+                        This process is designed to identify women who represent progress and are ready to grow
+                        personally and professionally.
+                        Please review the Participant Agreement & Titleholder Obligations before proceeding.
+                    </p>
+                </div>
+
+                <form id="missProgressForm">
+                    <!-- SECTION 1: BASIC INFORMATION -->
+                    <h3 class="form-section-title"><i class="fas fa-user"></i> Section 1: Basic Information</h3>
+                    <div class="grid-2">
+                        <div class="form-group">
+                            <label>Full Name</label>
+                            <input type="text" name="name" placeholder="Official names as per ID" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Age</label>
+                            <input type="number" name="age" placeholder="Min. 18 years" required>
+                        </div>
+                    </div>
+                    <div class="grid-2">
+                        <div class="form-group">
+                            <label>County of Residence</label>
+                            <input type="text" name="county" placeholder="E.g. Nairobi" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Phone Number</label>
+                            <input type="tel" name="phone" placeholder="+254 700 000000" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" name="email" placeholder="email@example.com" required>
+                    </div>
+                    <div class="grid-2">
+                        <div class="form-group">
+                            <label>Instagram Handle</label>
+                            <input type="text" name="instagram" placeholder="@username" required>
+                        </div>
+                        <div class="form-group">
+                            <label>TikTok Handle</label>
+                            <input type="text" name="tiktok" placeholder="@username" required>
+                        </div>
+                    </div>
+
+                    <!-- SECTION 2: EDUCATION AND WORK -->
+                    <h3 class="form-section-title"><i class="fas fa-graduation-cap"></i> Section 2: Education and Work
+                    </h3>
+                    <div class="form-group">
+                        <label>Current Occupation / Field of Study</label>
+                        <input type="text" name="occupation" placeholder="E.g. IT Student, Marketing Specialist"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label>Highest Level of Education Completed</label>
+                        <select name="education" required>
+                            <option value="">Select Level</option>
+                            <option value="High School">High School</option>
+                            <option value="Diploma">Diploma</option>
+                            <option value="Degree">Bachelor's Degree</option>
+                            <option value="Postgraduate">Postgraduate</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Current Status</label>
+                        <select name="employment_status" required>
+                            <option value="">Select Status</option>
+                            <option value="Employed">Employed</option>
+                            <option value="Studying">Studying</option>
+                            <option value="Self-employed">Self-employed</option>
+                            <option value="Unemployed">Unemployed</option>
+                        </select>
+                    </div>
+
+                    <!-- SECTION 3: PERSONAL STATEMENT -->
+                    <h3 class="form-section-title"><i class="fas fa-pen-nib"></i> Section 3: Personal Statement</h3>
+                    <div class="form-group">
+                        <label>Identify who you are beyond titles, work, school and appearances.</label>
+                        <p class="instruction-text">(Word count: 100–150 words)</p>
+                        <textarea name="personal_statement" rows="6" placeholder="Tell us your story..."
+                            required></textarea>
+                    </div>
+
+                    <!-- SECTION 4: PROGRESS & ADVOCACY -->
+                    <h3 class="form-section-title"><i class="fas fa-bullhorn"></i> Section 4: Progress & Advocacy</h3>
+                    <div class="form-group">
+                        <label>Identify one social issue you care deeply about and explain one practical action you have
+                            taken or would like to take.</label>
+                        <textarea name="advocacy" rows="6" placeholder="Your advocacy and impact..."
+                            required></textarea>
+                    </div>
+
+                    <!-- SECTION 5: ELIGIBILITY REQUIREMENTS -->
+                    <h3 class="form-section-title"><i class="fas fa-check-double"></i> Section 5: Eligibility
+                        Requirements</h3>
+                    <div class="requirement-list">
+                        <div class="requirement-item"><i class="fas fa-circle-check"></i> <span>Natural born
+                                female</span></div>
+                        <div class="requirement-item"><i class="fas fa-circle-check"></i> <span>Kenyan citizen</span>
+                        </div>
+                        <div class="requirement-item"><i class="fas fa-circle-check"></i> <span>Aged between 18 (on or
+                                before May 29, 2026) and 32</span></div>
+                        <div class="requirement-item"><i class="fas fa-circle-check"></i> <span>Minimum height (without
+                                heels) of 1.60m (5’ 4”)</span></div>
+                        <div class="requirement-item"><i class="fas fa-circle-check"></i> <span>Fluent in English with
+                                excellent communication skills</span></div>
+                        <div class="requirement-item"><i class="fas fa-circle-check"></i> <span>No criminal record or
+                                involvement in obscene exhibitions</span></div>
+                        <div class="requirement-item"><i class="fas fa-circle-check"></i> <span>Possess a valid Kenyan
+                                passport</span></div>
+                        <div class="requirement-item"><i class="fas fa-circle-check"></i> <span>Willing to represent
+                                Kenya in Puglia, Italy in May/June 2026</span></div>
+                    </div>
+
+                    <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1.5rem;">
+                        Note: Failure to meet any requirements will result in immediate disqualification and may lead to
+                        a claim for damages pursuant to Kenyan law.
+                    </p>
+
+                    <div class="checkbox-group">
+                        <label class="checkbox-item">
+                            <input type="checkbox" required>
+                            <span>I have read and understood all the requirements and agree with them</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" required>
+                            <span>I understand that Miss Progress Kenya is a development-focused pageant</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" required>
+                            <span>I am willing to participate in training sessions and official activities</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" required>
+                            <span>I understand that participation may involve personal financial contribution (travel,
+                                wardrobe, or training), clearly communicated in advance</span>
+                        </label>
+                    </div>
+
+                    <!-- SECTION 6: MEDIA -->
+                    <h3 class="form-section-title"><i class="fas fa-images"></i> Section 6: Media</h3>
+
+                    <div class="grid-2">
+                        <div class="form-group">
+                            <label>Headshot Photo</label>
+                            <div class="file-upload-box">
+                                <i class="fas fa-camera text-gold mb-sm" style="font-size: 1.5rem;"></i>
+                                <p style="font-size: 0.8rem;">Click to upload headshot</p>
+                                <input type="file" name="headshot" accept="image/*" required style="display: none;">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Full-body Photo</label>
+                            <div class="file-upload-box">
+                                <i class="fas fa-female text-gold mb-sm" style="font-size: 1.5rem;"></i>
+                                <p style="font-size: 0.8rem;">Click to upload full-body photo</p>
+                                <input type="file" name="fullbody" accept="image/*" required style="display: none;">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group mt-md">
+                        <label>Introduction Video (1 Minute)</label>
+                        <div class="card"
+                            style="padding: 1.5rem; background: rgba(245, 130, 32, 0.05); border-color: rgba(245, 130, 32, 0.2);">
+                            <p style="font-size: 0.95rem; margin-bottom: 15px;">
+                                <strong>Question:</strong> What does "progress" mean to you personally?
+                            </p>
+                            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 15px;">
+                                Upload this video on Instagram and invite <strong>@reignpageantacademy</strong> for
+                                collaboration. The audition is incomplete without this.
+                            </p>
+                            <div class="file-upload-box" style="border-style: solid; border-width: 1px;">
+                                <i class="fab fa-instagram text-gold mb-sm" style="font-size: 1.5rem;"></i>
+                                <p style="font-size: 0.8rem;">Upload a copy of the video (Optional backup)</p>
+                                <input type="file" name="intro_video" accept="video/*" style="display: none;">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SECTION 7: APPLICATION FEE & SUBMISSION -->
+                    <h3 class="form-section-title"><i class="fas fa-credit-card"></i> Section 7: Application Fee &
+                        Submission</h3>
+                    <div class="fee-highlight">
+                        Application Fee: Ksh 2,000 – 3,000
+                    </div>
+                    <p class="text-center" style="margin-bottom: 2rem;">
+                        Application fees are non-refundable and support the selection process.<br>
+                        <strong>Deadline: 07 January 2026</strong>
+                    </p>
+
+                    <!-- SECTION 8: DECLARATION & CONSENT -->
+                    <h3 class="form-section-title"><i class="fas fa-signature"></i> Section 8: Declaration & Consent
+                    </h3>
+                    <p style="font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.5rem;">
+                        By proceeding with this application, I confirm that I have carefully read and understood the
+                        Miss Progress Kenya eligibility requirements, selection process, and Participant Agreement. I
+                        voluntarily agree to abide by all terms and conditions stated.
+                    </p>
+                    <label class="checkbox-item" style="margin-bottom: 3rem;">
+                        <input type="checkbox" required>
+                        <span>I AGREE</span>
+                    </label>
+
+                    <button type="submit" class="btn btn-primary w-100">Submit Final Application</button>
+
+                    <div class="text-center mt-md">
+                        <p style="font-size: 0.85rem; color: var(--text-secondary);">
+                            Shortlisted applicants will be contacted via email regarding the Progress Lab training and
+                            next steps.
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <img src="img/logo-white.png" alt="Logo">
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope text-gold"></i> reignpageantacademy@gmail.com</li>
+                        <li><i class="fab fa-instagram text-gold"></i> @reignpageantacademy</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Reign Pageant Academy. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script>
+        // Custom file upload interactions
+        document.querySelectorAll('.file-upload-box').forEach(box => {
+            const input = box.querySelector('input');
+            box.addEventListener('click', () => input.click());
+            input.addEventListener('change', () => {
+                if (input.files.length > 0) {
+                    box.querySelector('p').innerText = input.files[0].name;
+                    box.style.borderColor = 'var(--color-gold)';
+                }
+            });
+        });
+
+        // Form Submission Handler
+        document.getElementById('missProgressForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for your interest in Miss Progress Kenya. Shortlisted applicants will be contacted with next steps.');
+            // Here you would normally send the data to a server
+        });
+    </script>
+</body>
+
+</html>
