@@ -23,12 +23,13 @@
         .form-section-title {
             color: var(--color-gold);
             border-bottom: 1px solid var(--border-color);
-            padding-bottom: 1rem;
-            margin-bottom: 2rem;
-            margin-top: 3rem;
+            padding-bottom: 0.8rem;
+            margin-bottom: 1.5rem;
+            margin-top: 2.5rem;
             display: flex;
             align-items: center;
             gap: 10px;
+            font-size: 1.2rem;
         }
 
         .form-section-title:first-of-type {
@@ -37,67 +38,58 @@
 
         .requirement-list {
             background: rgba(0, 0, 0, 0.2);
-            padding: 2rem;
+            padding: 1.5rem;
             border-radius: 8px;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
             border: 1px solid var(--border-color);
         }
 
         .requirement-item {
             display: flex;
-            gap: 15px;
-            margin-bottom: 1rem;
-            font-size: 0.95rem;
+            gap: 12px;
+            margin-bottom: 0.8rem;
+            font-size: 0.9rem;
             color: var(--text-muted);
+            line-height: 1.4;
         }
 
         .requirement-item i {
             color: var(--color-gold);
-            margin-top: 4px;
+            margin-top: 3px;
         }
 
         .checkbox-group {
             display: grid;
-            gap: 1rem;
-            margin-top: 1.5rem;
-        }
-
-        .checkbox-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 12px;
-            cursor: pointer;
-            padding: 1rem;
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: 4px;
-            transition: var(--transition-fast);
-        }
-
-        .checkbox-item:hover {
-            border-color: var(--color-gold);
-        }
-
-        .checkbox-item input {
-            width: auto;
-            margin-top: 4px;
+            gap: 0.8rem;
+            margin-top: 1rem;
         }
 
         .fee-highlight {
             background: var(--gradient-gold);
             color: #000;
-            padding: 1.5rem;
+            padding: 1rem;
             border-radius: 8px;
             text-align: center;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
             font-weight: 700;
         }
 
         .instruction-text {
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             color: var(--text-secondary);
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.4rem;
             font-style: italic;
+        }
+
+        @media (max-width: 768px) {
+            .section-padding {
+                padding: 2rem 0;
+            }
+
+            .form-section-title {
+                margin-top: 2rem;
+                font-size: 1.1rem;
+            }
         }
     </style>
 </head>
@@ -367,7 +359,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer id="contact">
         <div class="container">
             <div class="footer-grid">
@@ -388,7 +379,8 @@
                     <ul>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About</a></li>
-                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="miss-progress-apply.html">Apply Now</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
             </div>

@@ -446,6 +446,54 @@ footer {
     .hamburger {
         display: block;
     }
+
+    /* --- Final Polish: Mobile Optimization --- */
+    :root {
+        --spacing-xl: 4rem;
+        /* Reduced from 8rem */
+        --spacing-lg: 2rem;
+        /* Reduced from 4rem */
+    }
+
+    .section-padding {
+        padding: 3rem 0;
+        /* Tighter sections */
+    }
+
+    form {
+        gap: 1rem;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        font-size: 16px !important;
+        /* Prevents auto-zoom on iOS */
+        padding: 0.8rem;
+    }
+
+    .checkbox-item {
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        background: var(--bg-card);
+        border: 1px solid var(--border-color);
+        margin-bottom: 0.5rem;
+        cursor: pointer;
+    }
+
+    .checkbox-item input[type="checkbox"] {
+        width: 25px;
+        height: 25px;
+        min-width: 25px;
+        cursor: pointer;
+        accent-color: var(--color-gold);
+    }
+
+    .grid-2 {
+        gap: 0.5rem;
+    }
 }
 
 @keyframes fadeInDown {
